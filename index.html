@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <section class="sidebar">
+        <h1>
+          <img src="assets/cropped_logo.svg" height="36" alt="" />
+          <span>Spotify</span>
+        </h1>
+      </section>
+      <div>
+        <div class="hamburger-container">
+          <button class="hamburger-btn | pressable-btn">
+            <img src="assets/hamburger.svg" height="36" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="sidebar">
+        <h2>
+          <img src="assets/playlist.svg" height="28" alt="" />
+          <span>Your Queue</span>
+        </h2>
+        <div id="queue-container">
+          <template id="queue-template">
+            <div class="queue-item">
+              <div>
+                <img src="assets/music.svg" height="28" alt="" />
+                <span>Your Queue test is gettting too big so it cuts off</span>
+              </div>
+              <div class="queue-item-actions">
+                <span>Play Now</span>
+                <img src="assets/play.svg" height="28" alt="" />
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+      <section class="main">
+        <div class="content-container">
+          <div class="playlist-wrapper">
+            <h2>
+              <span>Playlists</span>
+            </h2>
+            <div id="playlist-container">
+              <template id="playlist-template">
+                <div class="playlist-item">
+                  <div class="playlist-img-container">
+                    <img src="assets/cover.jpg" alt="" />
+                    <!-- Green play button -->
+                    <div class="play-btn-container">
+                      <button class="play-btn | pressable-btn">
+                        <img src="assets/play-filled.svg" height="24" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-title">TEST</div>
+                  <p class="playlist-desc">TEST</p>
+                </div>
+              </template>
+            </div>
+          </div>
+          <div class="playbar-container">
+            <div class="playbar-info">
+              <p class="song-name">
+                Your Queue test is getting too big so it cuts off
+              </p>
+            </div>
+            <div class="playbar">
+              <div class="playbar-actions">
+                <!-- Previous -->
+                <img
+                  class="pressable-btn"
+                  src="assets/prevsong.svg"
+                  height="28"
+                  alt=""
+                />
+                <!-- Play/Pause -->
+                <img
+                  class="pressable-btn"
+                  id="song-status-btn"
+                  src="assets/play.svg"
+                  height="28"
+                  alt=""
+                />
+                <!-- Next -->
+                <img
+                  class="pressable-btn"
+                  src="assets/nextsong.svg"
+                  height="28"
+                  alt=""
+                />
+              </div>
+              <div class="playbar-progress">
+                <progress value="70" max="100"></progress>
+              </div>
+            </div>
+            <div class="meta-container">
+              <div class="meta-info">
+                <div>
+                  <span id="currentTime">00:00</span>
+                  <span>/</span>
+                  <span id="duration">00:00</span>
+                </div>
+                <button class="icon-btn | pressable-btn">
+                  <!-- Volume Icon -->
+                  <img src="assets/volume.svg" alt="" height="28" />
+                  <div class="volume-popup">
+                    <input type="range" min="0" max="100" value="0" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="sidebar-overlay"></div>
+  </body>
+</html>
